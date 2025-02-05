@@ -56,9 +56,9 @@
                 </div>
             </div>
 
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation" method="get">
                 <div class="col-6 ">
-                    <label for="autorname" class="form-label">Nome autore</label>
+                    <label for="autorname" class="form-label ">Nome autore</label>
                     <input type="text" class="form-control" id="autorname" value=""
                         placeholder="Insirisci il nome dell'autore" required>
                     <div class="valid-feedback">
@@ -77,21 +77,50 @@
                     <label for="title" class="form-label">Titolo</label>
                     <input type="text" class="form-control" id="title" value=""
                         placeholder="Inserisci il titolo del libro" required>
-                    <div class="valid-feedback">
+                    <div class="valid-feedback"> <small id="helpId" class="form-text text-muted">Titolo versione
+                            italiana</small>
 
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4 mb-3">
-                    <label for="" class="form-label">City</label>
-                    <select class="form-select form-select-lg" name="" id="">
-                        <option selected>Select one</option>
-                        <option value="">New Delhi</option>
-                        <option value="">Istanbul</option>
-                        <option value="">Jakarta</option>
+                <div class="col-12 col-lg-4 mb-3">
+                    <label for="type" class="form-label">Genere</label>
+                    <select class="form-select " name="type" id="type">
+                        <option selected>Horror</option>
+                        <option value="">Romantico</option>
+                        <option value="">Drammatico</option>
+
                     </select>
                 </div>
+                <div class="col-lg-4 mb-3">
+                    <label for="years" class="form-label">Anno di Pubblicazione</label>
+                    <input type="text" class="form-control" name="years" id="years" aria-describedby="helpId"
+                        placeholder=" inserisci l'anno" />
 
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <label for="isbn" class="form-label"><i class="fa fa-ils" aria-hidden="true"></i></label>
+                    <input type="number" class="form-control" name="isbn" id="isbn" aria-describedby="helpId"
+                        placeholder="Inserisci il codice ISBN#" />
+
+                </div>
+                <hr class="mt-5">
+
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Note</label>
+                        <textarea class="form-control" name="notes" id="notes" rows="2"
+                            placeholder="insersci eventuali note"></textarea>
+                    </div>
+
+
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="digital" value="" id="digital" />
+                    <label class="form-check-label" for="digital"> Disponibile anche in digitale </label>
+                </div>
+                <input name="sub" id="sub" class="btn btn-primary col-2 col-ml-1" type="submit"
+                    value="Aggiungi libro" />
 
             </form>
 
